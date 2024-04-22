@@ -1,0 +1,103 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$base-size: 16;
+
+@function size($target, $context: $base-size) {
+    @return calc($target / $context) * 1rem;
+}
+
+:root {
+    --primary: #2aa7ff;
+    --primary-100: lightern(#2aa7ff, 10%);
+    --primary-500: lightern(#2aa7ffred, 50%);
+    --primary-900 :var(--primary);
+
+    --secondary: #0E084C;
+    --slate: #44416B;
+    --safronGreen: #4FACA3;
+    --levender: #CFCDE0;
+    --bubblegum: #C64DC9;
+    --copperRust: #72D1AF;
+    --text-sm: #{size(20)};
+    --text-md: #{size(24)};
+    --text-lg: #{size(50)};
+    --text-xl: #{size(60)};
+    --text-h6: #{size(20)};
+    --text-h5: #{size(24)};
+    --text-h4: #{size(32)};
+    --text-h3: #{size(36)};
+    --text-h2: #{size(45)};
+    --text-h1: #{size(50)};
+
+    /* padding*/
+    --space-xs: #{size(4)};
+    --space-sm: #{size(8)};
+    --space-md: #{size(16)};
+    --space-lg: #{size(24)};
+
+    /* border radius */
+    --radius-sm: 4px;
+    --radius-md: 15px;
+    --radius-lg: 32px;
+
+    @layer base {
+
+        h1,.h1 {
+            &:not(.ttl) {
+            @apply text-[24px] sm:text-[24px] md:text-[32px] lg:text-h1 
+            }
+        }
+
+
+        h2,.h2 {
+            &:not(.ttl) {
+            @apply text-h2
+            }
+        }
+
+
+        h3,.h3 {
+            &:not(.ttl) {
+            @apply text-h3
+            }
+        }
+
+
+        h4,.h4 {
+            &:not(.ttl) {
+            @apply text-h4
+            }
+        }
+
+
+        h5,.h5 {
+            &:not(.ttl) {
+            @apply text-h5
+            }
+        }
+
+
+        h6,.h6 {
+            &:not(.ttl) {
+            @apply text-h6
+            }
+        }
+
+    }
+
+
+}
+
+
+// Buttons 
+   .btn {
+       @apply px-5 py-3 shadow-sm transition ease-in-out duration-300 rounded-sm leading-snug whitespace-nowrap text-base font-semibold;
+   }
+   .btn-primary {
+        @apply bg-primary-900 text-white  
+   }
+

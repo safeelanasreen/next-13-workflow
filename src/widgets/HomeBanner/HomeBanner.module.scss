@@ -1,0 +1,15 @@
+@import "@/styles/mixins";
+
+.BannerImage {
+    position: relative;
+        height: 580px;
+    @include max(767) {
+        height: 200px;
+    }
+}
+.BannerText{
+    position: absolute;
+    z-index: 1;
+}
+
+    
